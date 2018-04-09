@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+    <head>
+        <link rel="stylesheet" media="all" type="text/css" href="datetime/jquery-ui.css" />
+        <link rel="stylesheet" media="all" type="text/css" href="datetime/jquery-ui-timepicker-addon.css" />
+
+        <script type="text/javascript" src="datetime/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="datetime/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="datetime/jquery-ui-timepicker-addon.js"></script>
+        <script type="text/javascript" src="datetime/jquery-ui-timepicker-addon-i18n.min.js"></script>
+        <script type="text/javascript" src="datetime/jquery-ui-sliderAccess.js"></script>
+    </head> 
+    <body> 
+        <div class="wrapper">
+            <!-- ============= example -->
+            <div class="example-container">
+                <div>
+                    <input type="text" name="basic_example_1" id="basic_example_1" value="" />
+                </div>					
+                <pre>
+
+                </pre>
+            </div>
+
+
+
+
+        </div>
+        <script type="text/javascript">
+
+            $(function() {
+                $('.example-container > pre').each(function(i) {
+                    eval("$('#basic_example_1').datetimepicker();");
+                });
+            });
+        </script>
+
+
+
+
+    </body> 
+</html>
