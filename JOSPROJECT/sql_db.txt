@@ -1,0 +1,144 @@
+create table customer(
+	CID varchar(20),
+	address varchar(20),
+	name varchar(20),
+	email varchar(20),
+	CCN varchar(20),
+	primary key (CID, name)
+);
+
+create table store(
+	SID varchar(20),
+	hours varchar(20),
+	location varchar(20),
+	primary key (SID)
+);
+
+create table product(
+	UPC_code varchar(20),
+	brandName varchar(20),
+	price varchar(20),
+	color varchar(20),
+	primary key (UPC_code) 
+);
+
+create table sweater(
+	UPC_code varchar(20),
+	psize varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table sportsShirt(
+	UPC_code varchar(20),
+	psize varchar(20),
+	fit varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table khaki(
+	UPC_code varchar(20),
+	waist varchar(20),
+	length varchar(20),
+	fit varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table jacket(
+	UPC_code varchar(20),
+	chest varchar(20),
+	length varchar(20),
+	fit varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table jeans(
+	UPC_code varchar(20),
+	waist varchar(20),
+	fit varchar(20),
+	rise varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table suit(
+	UPC_code varchar(20),
+	chest varchar(20),
+	length varchar(20),
+	fit varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table dressShirt(
+	UPC_code varchar(20),
+	neckSize varchar(20),
+	sleeveLength varchar(20),
+	fit varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table tie(
+	UPC_code varchar(20),
+	length varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table dressPant(
+	UPC_code varchar(20),
+	waist varchar(20),
+	rise varchar(20),
+	fit varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table polo(
+	UPC_code varchar(20),
+	fit varchar(20),
+	psize varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+create table shoe(
+	UPC_code varchar(20),
+	width varchar(20),
+	length varchar(20),
+	vendor varchar(20),
+	primary key (UPC_code),
+	foreign key (UPC_code) references product
+);
+
+
+
+create table orders
+(
+	PID		varchar(20),
+	CID		varchar(20),
+	SID		varchar(20),
+	UPC_Code   varchar(20),
+	currentDate  date,
+	PRIMARY KEY (PID),
+	constraint fk_customer foreign key (CID) references customer
+	constraint fk_store foreign key (SID) references store
+	constraint fk_product foreign key (UPC_code) references product
+);
+
+
+
+create table inventory
+(
+	UPC_code varchar(20),
+	SID varchar(20),
+	stock int(38),
+	primary key (UPC_code, SID),
+	constraint fk_products foreign key (UPC_code) references product,
+	constraint fk_stores foreign key (SID) references store
+	constraint checkStock check(stock <101)
+);

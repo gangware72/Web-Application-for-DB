@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="updateButton" layoutX="369.0" layoutY="337.0" mnemonicParsing="false" onAction="#updateButtonFired" prefHeight="25.0" prefWidth="85.0" text="Add Product" />
+      <TextField fx:id="product" layoutX="144.0" layoutY="222.0" prefHeight="25.0" prefWidth="313.0" />
+      <Label layoutX="227.0" layoutY="166.0" text="Enter Product SKU">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Text fx:id="pFail" layoutX="98.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="238.33673095703125" />
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="225.0">
+         <image>
+            <Image url="@jos-a-bank.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="173.0">
+         <image>
+            <Image url="@Suit.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="quantity" layoutX="419.0" layoutY="264.0" prefHeight="25.0" prefWidth="38.0" />
+      <Text layoutX="359.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" wrappingWidth="52.936767578125" />
+      <Text layoutX="98.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SKU#:" wrappingWidth="38.071502685546875" />
+      <Button fx:id="backButton" layoutX="510.0" layoutY="50.0" mnemonicParsing="false" onAction="#backButtonFired" prefWidth="70.0" text="Back" />
+      <Button fx:id="signOut" layoutX="510.0" layoutY="15.0" mnemonicParsing="false" onAction="#signOutFired" prefWidth="70.0" text="Sign Out" />
+      <Text fx:id="maxquantity" layoutX="144.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="84.9999949336052" />
+   </children>
+</AnchorPane>

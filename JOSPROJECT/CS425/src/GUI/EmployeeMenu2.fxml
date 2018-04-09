@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="235.0" layoutY="222.0" text="Select an Option">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ButtonBar buttonMinWidth="30.0" layoutX="169.0" layoutY="258.0" prefHeight="40.0" prefWidth="263.0">
+        <buttons>
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonFired" text="Search Products" />
+          <Button fx:id="stockButton" mnemonicParsing="false" onAction="#stockButtonFired" prefHeight="25.0" prefWidth="111.0" text="Update Stock" />
+        </buttons>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </ButtonBar>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="225.0">
+         <image>
+            <Image url="@jos-a-bank.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="173.0">
+         <image>
+            <Image url="@Suit.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="signOutButton" layoutX="510.0" layoutY="15.0" mnemonicParsing="false" onAction="#signOutFired" prefWidth="70.0" text="Sign Out" />
+   </children>
+</AnchorPane>

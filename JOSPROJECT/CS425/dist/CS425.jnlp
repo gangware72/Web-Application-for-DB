@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CS425.jnlp">
+  <information>
+    <title>CS425</title>
+    <vendor>danmo</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CS425.jar" size="153224" download="eager" />
+    <jar href="lib\ojdbc7.jar" size="3397734" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.16.1.jar" size="6161066" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CS425" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="GUI.JABMain"  name="CS425" />
+  <update check="always"/>
+</jnlp>
